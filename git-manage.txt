@@ -1,0 +1,38 @@
+a. Create a Git repository, initialize it, and add a Python project
+Step 1: Create a Project Directory
+mkdir git-prac3
+cd git-prac3
+Step 2: Create a Sample Python Project
+echo print("Hello from main branch")
+Step 3: Initialize Git
+git init
+Step 4: Add Files and Commit
+git add .
+git commit -m &quot;Initial commit with basic app.py&quot;
+Step 5: Create a Remote Repo on GitHub
+ Go to https://github.com
+ Click New Repository → Name: git-prac3
+ DO NOT initialize with README
+Step 6: Add Remote and Push(in VSCode)
+git remote add origin https://github.com/YOUR_USERNAME/git-prac3.git
+git branch -M main
+git push -u origin main
+
+ b. Demonstrate branching and pull requests
+Step 1: Create a Feature Branch
+git checkout -b feature/greet-user
+Step 2: Add New Code
+Edit app.py:
+name = input(&quot;Enter your name: &quot;)
+print(f&quot;Hello, {name}!&quot;)
+
+Then in Powershell:
+git add app.py
+git commit -m &quot;Add user greeting feature&quot;
+git push origin feature/greet-user
+Step 3: Create a Pull Request
+1. Go to your repo on GitHub
+2. You’ll see a prompt: “Compare &amp; pull request”
+3. Click it → Add a description → Click “Create pull request”
+4. Review and click “Merge pull request”
+5. Confirm merge and delete branch (optional)
